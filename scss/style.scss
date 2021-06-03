@@ -1,0 +1,370 @@
+// common html settings
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.ml-3 {
+  margin-left: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// header section
+header {
+  position: fixed;
+  z-index: 100;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+
+  .container {
+    position: relative;
+  }
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-item {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .logo {
+    height: 30px;
+    margin-right: 10px;
+  }
+}
+
+.icon-search,
+.icon-favorite,
+.icon-bag {
+  position: absolute;
+  top: -0.5rem;
+}
+
+.icon-search {
+  left: 45px;
+}
+
+.icon-favorite {
+  right: 50px;
+}
+
+.icon-bag {
+  right: 20px;
+}
+
+// seriesMenu setction
+.seriesMenu {
+  padding: 90px 10px 30px 10px;
+}
+
+.seriesMenu-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.select-bar-container select {
+  width: 210px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.seriesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 6rem;
+}
+
+.seriesList-item {
+  .item-link {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.item-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0.5rem;
+  // overflow: hidden;
+  background: url('../images/t-shirt.png') no-repeat center;
+  background-size: contain;
+}
+
+.item-image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.seriesList-item:nth-child(4n-3) .item-image::after {
+  background: url('../images/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png') no-repeat center;
+  background-size: cover;
+}
+
+.seriesList-item:nth-child(4n-2) .item-image::after {
+  background: url('../images/anomaly-WWesmHEgXDs-unsplash.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.seriesList-item:nth-child(4n-1) .item-image::after {
+  background: url('../images/christian-bolt-VW5VjskNXZ8-unsplash.png') no-repeat center;
+  background-size: cover;
+}
+
+.seriesList-item:nth-child(4n) .item-image::after {
+  background: url('../images/faith-yarn-hgtWvsq5e2c-unsplash.png') no-repeat center;
+  background-size: cover;
+}
+
+.item-image:hover::after {
+  opacity: 1;
+}
+
+.item-favorite {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  background-color: #fff;
+  color: gray;
+  z-index: 10;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+.pages {
+  margin-bottom: 4rem;
+}
+
+// subscribe setction
+.subscribe > .container {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  background-color: #f0f0f0;
+}
+.subscribe-title {
+  margin-bottom: 2rem;
+}
+
+.subscribe-info {
+  input {
+    width: 70%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-style: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    margin-right: -5px;
+  }
+
+  button {
+    width: 20%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-style: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+  }
+
+  margin-bottom: 1rem;
+}
+
+.subscribe-description > a {
+  text-decoration: underline;
+}
+
+// footer section
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  // common settings
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  // header section
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-right: 120px;
+
+    .nav-item {
+      font-size: 20px;
+    }
+  }
+
+  .navbar-brand {
+    width: 310px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 2rem;
+    position: static;
+    transform: translate(0%, 0%);
+
+    .logo {
+      height: 40px;
+    }
+  }
+
+  .icon-search,
+  .icon-favorite,
+  .icon-bag {
+    all: unset;
+    cursor: pointer;
+  }
+
+  // seriesMenu section
+  .seriesList {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+  }
+
+  .item-image {
+    height: 350px;
+  }
+
+  .item-favorite {
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  // subscribe section
+  .subscribe > .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: url('../images/template.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .subscribe-info {
+    input {
+      width: 45%;
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      border-style: none;
+      outline: none;
+      padding: 1.2rem;
+      font-size: 1rem;
+      text-align: center;
+      margin-right: -5px;
+    }
+
+    button {
+      width: 15%;
+      padding: 1.2rem;
+      font-size: 1rem;
+    }
+
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .subscribe > .container {
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: url('../images/template.png') no-repeat center;
+    background-size: cover;
+  }
+}
